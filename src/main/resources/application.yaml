@@ -1,5 +1,5 @@
 server:
-  port: 9900
+  port: 8888
 spring:
   application:
     name: spring-cloud-config-server
@@ -7,4 +7,11 @@ spring:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/JeongSoonMin/spring-cloud-config.git
+          search-paths: /**
+          default-label: main
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
